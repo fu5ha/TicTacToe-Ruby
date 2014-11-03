@@ -33,7 +33,7 @@ class GameBoard
 
   def add_player(player)
     if player == 1
-      system('clear')
+      system('clear') or system('cls')
       puts "Player 1, which piece do you want? (X/O)" 
 
       piece_set = false
@@ -128,7 +128,7 @@ class GameBoard
 
   def game_loop
     (1..9).each do |i|
-      system('clear')
+      system('clear') or system('cls')
       puts "Current board:"
       render_board
 
@@ -145,7 +145,7 @@ game_board = GameBoard.new
 
 result = game_board.game_loop
 if result == 0
-  system('clear')
+  system('clear') or system('cls')
   puts "Current board:"
   game_board.render_board
   puts "Cat's game!"
